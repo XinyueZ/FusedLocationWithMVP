@@ -17,7 +17,7 @@ Checkout this [Branch](https://github.com/XinyueZ/FusedLocationWithMVP/tree/feat
 
 > Play-service before v11.0.1
 
-    Old style, don't recommended. Before using service we have to maintaince the GoogleApiClient.
+    Old style, don't recommended. Before using service we have to maintain the GoogleApiClient.
      
 Checkout this [Branch](https://github.com/XinyueZ/FusedLocationWithMVP/tree/feature/playservice-old/location-service)
 
