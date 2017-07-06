@@ -43,6 +43,7 @@ ext {
     easyPermissions = "0.4.2"
     multidexVersion = "1.0.1"
     dataBinding = "3.0.0-alpha3"
+    thirdPart = "3.3.1"
 }
 
 dependencies {
@@ -52,6 +53,10 @@ dependencies {
     implementation "com.android.support:design:${appCompat}"
     implementation "com.google.android.gms:play-services-location:${playService}"
     implementation "pub.devrel:easypermissions:${easyPermissions}"
+    implementation("io.nlopez.smartlocation:library:${thirdPart}") {
+        transitive = false
+    }
+    implementation "io.nlopez.smartlocation:rx:${thirdPart}"
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:${kotlin_version}"
     implementation "com.android.support:design:${dataBinding}"
     kapt "com.android.databinding:compiler:${dataBinding}"

@@ -1,10 +1,10 @@
-# Connect with play-service
+# Use 3rd library to get location
 
->Play-service after v11.0.1
+>Easiest way with smart-location-lib
 
-Great progress is that we don't need Google GoogleApiClient explict to initilize the location-service.
+To save time and ignore a lot details of service, you need this 3rd-lib,
+however, before you use you must check whether the library has been updated and
+especially when the provider is Google Play-Service.
 
 Info:
-1. https://android-developers.googleblog.com/2017/06/reduce-friction-with-new-location-apis.html
-2. https://developer.android.com/training/location/receive-location-updates.html
-3. https://github.com/codepath/android_guides/wiki/Retrieving-Location-with-LocationServices-API
+https://github.com/mrmans0n/smart-location-libpath/android_guides/wiki/Retrieving-Location-with-LocationServices-API
