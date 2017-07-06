@@ -13,13 +13,13 @@ Use MVP to solve location and UI-Handling.
     2. https://developer.android.com/training/location/receive-location-updates.html
     3. https://github.com/codepath/android_guides/wiki/Retrieving-Location-with-LocationServices-API
     
-Checkout this [Branch](https://github.com/XinyueZ/FusedLocationWithMVP/tree/feature/playservice-since-11.0.1/new-location-service)
+Checkout branch: feature/playservice-since-11.0.1/new-location-service
 
 > Play-service before v11.0.1
 
     Old style, don't recommended. Before using service we have to maintain the GoogleApiClient.
      
-Checkout this [Branch](https://github.com/XinyueZ/FusedLocationWithMVP/tree/feature/playservice-old/location-service)
+Checkout branch: feature/playservice-old/location-service
 
 > Easiest way with smart-location-lib
     
@@ -29,5 +29,6 @@ Checkout this [Branch](https://github.com/XinyueZ/FusedLocationWithMVP/tree/feat
     
     Info:
     https://github.com/mrmans0n/smart-location-lib
+
+Checkout branch: feature/3rd/smart-location-lib
     
-Checkout this [Branch](https://github.com/XinyueZ/FusedLocationWithMVP/tree/feature/3rd/smart-location-lib)
