@@ -30,4 +30,4 @@ Checkout this [Branch](https://github.com/XinyueZ/FusedLocationWithMVP/tree/feat
     Info:
     https://github.com/mrmans0n/smart-location-lib
     
-Checkout this Branch
+Checkout this [Branch](https://github.com/XinyueZ/FusedLocationWithMVP/tree/feature/3rd/smart-location-lib)
