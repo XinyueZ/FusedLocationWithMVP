@@ -16,7 +16,7 @@ Use MVP to solve location and UI-Handling.
     Checkout branch: feature/playservice-since-11.0.1/new-location-service
 > Play-service after v11.0.1 with map
 
-    Checkout branch: feature/playservice-since-11.0.1/feature/with-mapview
+    Checkout branch: feature/with-mapview
 
 Checkout branch: feature/playservice-since-11.0.1/new-location-service
 
