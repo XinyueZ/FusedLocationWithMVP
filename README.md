@@ -12,7 +12,12 @@ Use MVP to solve location and UI-Handling.
     1. https://android-developers.googleblog.com/2017/06/reduce-friction-with-new-location-apis.html
     2. https://developer.android.com/training/location/receive-location-updates.html
     3. https://github.com/codepath/android_guides/wiki/Retrieving-Location-with-LocationServices-API
-    
+
+    Checkout branch: feature/playservice-since-11.0.1/new-location-service
+> Play-service after v11.0.1 with map
+
+    Checkout branch: feature/playservice-since-11.0.1/feature/with-mapview
+
 Checkout branch: feature/playservice-since-11.0.1/new-location-service
 
 > Play-service before v11.0.1
