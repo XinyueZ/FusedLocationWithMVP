@@ -61,8 +61,3 @@ dependencies {
     implementation "pub.devrel:easypermissions:${easyPermissions}"
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${kotlin_version}"
 }
-
-
-kapt {
-    generateStubs = true
-}
