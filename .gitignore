@@ -1,4 +1,10 @@
 ktlint
+!./.idea/codeStyles/codeStyleConfig.xml
+!./.idea/codeStyles/Project.xml
+!./.idea/inspectionProfiles/profiles_settings.xml
+!./.idea/inspectionProfiles/ktlint.xml
+!./.idea/workspace.xml
+
 *.iml
 .gradle
 /local.properties
@@ -14,3 +20,4 @@ gradle/
 gradle*
 !gradle.properties
 map_key.xml
+gcp_key.xml
