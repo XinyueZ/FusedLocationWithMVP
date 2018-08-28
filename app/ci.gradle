@@ -5,11 +5,15 @@ if (executingOnCI) {
     println "👍  On CI(Travis CI) building...."
     def mapKey = System.getenv('MAP_KEY')
     print "👍 " + mapKey
-    def mapKeyFile = new File("src/main/res/values/map_key.xml")
-    mapKeyFile.createNewFile()
-    mapKeyFile.write("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n" +
-            "<resources>\n" +
-            "    <string name=\"google_maps_key\">" + mapKey +
-            "</string>\n" +
-            "</resources>")
+    def fileName = "src/main/res/values/map_key.xml"
+    def mapKeyFile = new File(fileName)
+    if (inputFile.exists()) {
+        println("A file named " + fileName + " already exisits in the same folder.")
+    } else {
+        mapKeyFile.write("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n" +
+                "<resources>\n" +
+                "    <string name=\"google_maps_key\">" + mapKey +
+                "</string>\n" +
+                "</resources>")
+    }
 }
