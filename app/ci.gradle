@@ -1,0 +1,9 @@
+def ciServer = 'TRAVIS'
+def executingOnCI = "true" == System.getenv(ciServer)
+
+if (executingOnCI) {
+    println "👍  On CI(Travis CI) building...."
+    mapKey = System.getenv('google_maps_key')
+    mapKeyFile = new File("src/main/res/values/map_key.xml")
+    mapKeyFile.text = mapKey
+}
