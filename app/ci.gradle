@@ -6,9 +6,10 @@ if (executingOnCI) {
     def mapKey = System.getenv('MAP_KEY')
     print "👍 " + mapKey
     def mapKeyFile = new File("src/main/res/values/map_key.xml")
-    mapKeyFile.text = "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n" +
+    mapKeyFile.createNewFile()
+    mapKeyFile.write("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n" +
             "<resources>\n" +
             "    <string name=\"google_maps_key\">" + mapKey +
             "</string>\n" +
-            "</resources>"
+            "</resources>")
 }
