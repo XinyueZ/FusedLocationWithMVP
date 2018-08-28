@@ -7,7 +7,7 @@ if (executingOnCI) {
     print "👍 " + mapKey
     def fileName = "src/main/res/values/map_key.xml"
     def mapKeyFile = new File(fileName)
-    if (inputFile.exists()) {
+    if (mapKeyFile.exists()) {
         println("A file named " + fileName + " already exisits in the same folder.")
     } else {
         mapKeyFile.write("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n" +
