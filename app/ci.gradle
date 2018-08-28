@@ -3,7 +3,7 @@ def executingOnCI = "true" == System.getenv(ciServer)
 
 if (executingOnCI) {
     println "👍  On CI(Travis CI) building...."
-    def mapKey = System.getenv('google_maps_key')
+    def mapKey = System.env.MAP_KEY
     print "👍 " + mapKey
     def mapKeyFile = new File("src/main/res/values/map_key.xml")
     mapKeyFile.text = "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n" +
