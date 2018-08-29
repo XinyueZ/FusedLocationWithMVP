@@ -11,6 +11,7 @@ import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.BitmapDescriptorFactory
 import com.google.android.gms.maps.model.LatLng
+import com.google.android.gms.maps.model.Marker
 import com.google.android.gms.maps.model.MarkerOptions
 import pub.devrel.easypermissions.AfterPermissionGranted
 import pub.devrel.easypermissions.EasyPermissions
@@ -21,6 +22,7 @@ class MainFragment : SupportMapFragment(), FindLocationContract.Viewer,
     EasyPermissions.PermissionCallbacks, OnMapReadyCallback {
     private var presenter: FindLocationContract.Presenter? = null
     private var map: GoogleMap? = null
+    private var currentPin: Marker? = null
 
     override fun onDestroyView() {
         super.onDestroyView()
@@ -105,7 +107,8 @@ class MainFragment : SupportMapFragment(), FindLocationContract.Viewer,
     override fun getViewActivity() = requireActivity()
 
     private fun GoogleMap.moveToMarker(latLng: LatLng, zoom: Float = 13f, anim: Boolean = true) {
-        addMarker(
+        currentPin?.remove()
+        currentPin = addMarker(
             MarkerOptions().position(latLng)
                 .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN))
         )
