@@ -10,10 +10,12 @@ if (executingOnCI) {
     if (mapKeyFile.exists()) {
         println("A file named " + fileName + " already exisits in the same folder.")
     } else {
-        mapKeyFile.write("<?xml version=\"1.0\" encoding=\"utf-8\"?>\n" +
+        def content = "<?xml version=\"1.0\" encoding=\"utf-8\"?>\n" +
                 "<resources>\n" +
                 "    <string name=\"google_maps_key\">" + mapKey +
                 "</string>\n" +
-                "</resources>")
+                "</resources>"
+        print "👍 \n" + content
+        mapKeyFile.write(content)
     }
 }
