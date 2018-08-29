@@ -9,15 +9,18 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
 
-    compileSdkVersion 28
+    compileSdkVersion rootProject.compile_sdk_version
     defaultConfig {
-        applicationId "com.demo.mvp"
-        minSdkVersion 19
-        targetSdkVersion 28
-        versionCode 1
-        versionName "1.0"
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        applicationId app_id
+        minSdkVersion rootProject.min_sdk_version
+        targetSdkVersion rootProject.target_sdk_version
+        versionCode rootProject.version_code
+        versionName rootProject.version_name
+
+        testInstrumentationRunner rootProject.test_instrumentation_runner
+
         multiDexEnabled = true
+        vectorDrawables.useSupportLibrary = true
     }
 
 
@@ -28,6 +31,11 @@ android {
 
     buildTypes {
         release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        debug {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
@@ -40,24 +48,23 @@ android {
 
 configurations.all { configuration ->
     resolutionStrategy {
-        force "com.android.support:support-v4:$supportLib4",
-                "com.android.support:appcompat-v7:$supportLib7"
+        force "com.android.support:support-v4:$app_compat", "com.android.support:appcompat-v7:$app_compat"
     }
 }
 
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation "com.android.support:support-core-utils:$supportLib4"
-    implementation "com.android.support:support-core-ui:$supportLib4"
-    implementation "com.android.support:support-media-compat:$supportLib4"
-    implementation ("com.android.support:appcompat-v7:$supportLib7") {
+    implementation "com.android.support:support-core-utils:$app_compat"
+    implementation "com.android.support:support-core-ui:$app_compat"
+    implementation "com.android.support:support-media-compat:$app_compat"
+    implementation("com.android.support:appcompat-v7:$app_compat") {
         exclude module: 'support-v4'
     }
-    implementation "com.android.support:multidex:${multidexVersion}"
+    implementation "com.android.support:multidex:${multidex}"
     implementation "com.android.support:design:${design}"
-    implementation "com.google.android.gms:play-services-location:${playService}"
-    implementation "com.google.android.gms:play-services-maps:${playService}"
+    implementation "com.google.android.gms:play-services-location:${play_service}"
+    implementation "com.google.android.gms:play-services-maps:${play_service}"
     implementation "pub.devrel:easypermissions:${easyPermissions}"
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${kotlin_version}"
 }
