@@ -20,7 +20,7 @@ if (executingOnCI) {
             if(!mapKeyFile.createNewFile()) {
                 print("🛑 Cannot create " + fileName + ".🛑 \n")
             }
-            print(fileName + " is OK.\n")
+            print(fileName + " is OK: " + mapKeyFile.exists() + ", is file: " + mapKeyFile.isFile())
             mapKeyFile.write(content)
         } catch(e) {
             print "🛑 " + e + "🛑\n"
