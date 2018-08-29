@@ -15,11 +15,12 @@ if (executingOnCI) {
                 "    <string name=\"google_maps_key\">" + mapKey +
                 "</string>\n" +
                 "</resources>"
-        print "👍 \n" + content
+        print "👍 \n" + content + "\n"
         try {
+            mapKeyFile.createNewFile()
             mapKeyFile.write(content)
         } catch(e) {
-            print "🛑 " + e
+            print "🛑 " + e + "🛑\n"
         }
     }
 }
