@@ -39,6 +39,7 @@ const val REQUEST_CHECK_SETTINGS = 0x0000009
 
 class FindLocationPresenter(
     private val view: FindLocationContract.Viewer,
+    @Suppress("CanBeParameter") private val mainPresenter: MainPresenter,
     private val localClient: FusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(
         view.getViewContext()
     ),

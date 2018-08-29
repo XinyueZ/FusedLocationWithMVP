@@ -8,8 +8,12 @@
     <data>
 
         <variable
-            name="view"
-            type="com.demo.mvp.findlocation.FindLocationContract.Viewer"/>
+                name="findLocationViewer"
+                type="com.demo.mvp.findlocation.FindLocationContract.Viewer"/>
+
+        <variable
+                name="mainViewer"
+                type="com.demo.mvp.findlocation.MainContract.Viewer"/>
     </data>
 
     <android.support.design.widget.CoordinatorLayout
@@ -45,7 +49,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|center"
             android:layout_margin="@dimen/fab_margin"
-            android:onClick="@{() -> view.getCurrentLocation()}"
+            android:onClick="@{() -> findLocationViewer.getCurrentLocation()}"
             app:srcCompat="@android:drawable/ic_dialog_map"
             app:useCompatPadding="true"/>
 
